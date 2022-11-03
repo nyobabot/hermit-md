@@ -23,7 +23,7 @@ Function({
 	desc: 'change text to styletext',
 	type: 'converter'
 }, async (m, match) => {
-	if (!match && !m.quoted.text) return await m.reply('_Need Text_\n*Example* : styletext Hermit')
+	if (!match && !m.quoted.text) return await m.reply('_Need Text_\n*Example* : styletext Mahir')
 	match = m.quoted ? m.quoted.text || m.quoted.data.message.hydratedFourRowTemplate.hydratedContentText : match;
 	const res = await styletext(match)
 	let text = ''
