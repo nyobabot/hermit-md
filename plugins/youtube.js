@@ -50,7 +50,7 @@ Function({
 		}
 		if (media.filesize >= 10000) return await send(message, await getBuffer(media.dl_link), ytId[1])
 		let thumb = await getBuffer(media.thumb)
-		let writer = await addAudioMetaData(await getBuffer(media.dl_link), thumb, media.title, `${config.BOT_INFO.split(";")[0]}`, 'Hermit Official')
+		let writer = await addAudioMetaData(await getBuffer(media.dl_link), thumb, media.title, `${config.BOT_INFO.split(";")[0]}`, 'Mahir Bot')
 		await send(message, writer, ytId[1])
 		return;
 	}
@@ -149,7 +149,7 @@ Function({
 			quoted: message.data
 		})
 		const thumbnail = await getBuffer(result.thumb)
-		const file = await addAudioMetaData(await getBuffer(result.dl_link), thumbnail, result.title, `${config.BOT_INFO.split(";")[0]}`, 'Hermit Official')
+		const file = await addAudioMetaData(await getBuffer(result.dl_link), thumbnail, result.title, `${config.BOT_INFO.split(";")[0]}`, 'Mahir Bot')
 		return await message.client.sendMessage(message.jid, {
 			audio: file,
 			mimetype: 'audio/mpeg'
@@ -172,7 +172,7 @@ Function({
 	}, {
 		quoted: message.data
 	})
-	const file = await addAudioMetaData(await getBuffer(result.dl_link), thumbnail, result.title, `${config.BOT_INFO.split(";")[0]}`, 'Hermit Official')
+	const file = await addAudioMetaData(await getBuffer(result.dl_link), thumbnail, result.title, `${config.BOT_INFO.split(";")[0]}`, 'Mahir Bot')
 	return await message.client.sendMessage(message.jid, {
 		audio: file,
 		mimetype: 'audio/mpeg'
